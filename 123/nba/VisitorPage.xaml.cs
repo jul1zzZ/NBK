@@ -30,22 +30,17 @@ namespace nba
 
         }
 
-        private void PlayersBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void MatchupsBtn_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void PhotosBtn_Click(object sender, RoutedEventArgs e)
+        private void PlayersBtn_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        private void PhotosBtn_Click(object sender, RoutedEventArgs e)
         {
 
         }

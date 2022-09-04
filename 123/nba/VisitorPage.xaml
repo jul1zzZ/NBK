@@ -15,14 +15,20 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition Height="20"></RowDefinition>
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="1" Margin="253,0,387,0">
-                <Button Width="75" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="340 5"></Button>
-                <Button Width="75" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="300"/>
-            </StackPanel>
-            <StackPanel Grid.Row="1" Margin="413,0,227,0">
-                <Button Width="75" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="340 5"/>
-                <Button Width="75" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="300"/>
-            </StackPanel>
+            <Grid Grid.Row="1" Margin="250,100">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Width="75" Height="30" Foreground="White" Background="CornflowerBlue" Content="Teams" x:Name="TeamsBtn" Click="TeamsBtn_Click"/>
+                <Button Width="75" Height="30" Grid.Row="1" Foreground="White" Background="CornflowerBlue" Content="Matchups" x:Name="MatchupsBtn" Click="MatchupsBtn_Click"/>
+                <Button Width="75" Height="30" Grid.Column="1" Foreground="White" Background="CornflowerBlue" Content="Players" x:Name="PlayersBtn" Click="PlayersBtn_Click"/>
+                <Button Width="75" Height="30" Grid.Row="1" Grid.Column="1" Foreground="White" Background="CornflowerBlue" Content="Photos" x:Name="PhotosBtn" Click="PhotosBtn_Click"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>
