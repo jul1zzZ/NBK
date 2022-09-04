@@ -1,0 +1,16 @@
+C:\Users\witless\source\repos\nba\nba\bin\Debug\nba.exe.config
+C:\Users\witless\source\repos\nba\nba\bin\Debug\nba.exe
+C:\Users\witless\source\repos\nba\nba\bin\Debug\nba.pdb
+C:\Users\witless\source\repos\nba\nba\obj\Debug\MainScreenPage.g.cs
+C:\Users\witless\source\repos\nba\nba\obj\Debug\VisitorPage.g.cs
+C:\Users\witless\source\repos\nba\nba\obj\Debug\App.g.cs
+C:\Users\witless\source\repos\nba\nba\obj\Debug\nba_MarkupCompile.cache
+C:\Users\witless\source\repos\nba\nba\obj\Debug\nba_MarkupCompile.lref
+C:\Users\witless\source\repos\nba\nba\obj\Debug\MainScreenPage.baml
+C:\Users\witless\source\repos\nba\nba\obj\Debug\VisitorPage.baml
+C:\Users\witless\source\repos\nba\nba\obj\Debug\nba.g.resources
+C:\Users\witless\source\repos\nba\nba\obj\Debug\nba.Properties.Resources.resources
+C:\Users\witless\source\repos\nba\nba\obj\Debug\nba.csproj.GenerateResource.cache
+C:\Users\witless\source\repos\nba\nba\obj\Debug\nba.csproj.CoreCompileInputs.cache
+C:\Users\witless\source\repos\nba\nba\obj\Debug\nba.exe
+C:\Users\witless\source\repos\nba\nba\obj\Debug\nba.pdb
