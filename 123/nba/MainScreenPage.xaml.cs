@@ -23,40 +23,25 @@ namespace nba
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void VisitorBtn_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(new VisitorPage());
-        }
-
-        private void AdminBtn_Click(object sender, RoutedEventArgs e)
-        {
-            
+            MainFrame.Navigate(new Pages.VisitorAdminPage());
         }
 
         private void MainFrame_ContentRendered(object sender, EventArgs e)
         {
             if (MainFrame.CanGoBack)
             {
-                BackBtn.Visibility = Visibility.Visible;
-                VisitorBtn.Visibility = Visibility.Collapsed;
-                AdminBtn.Visibility = Visibility.Collapsed;
+                BtnBack.Visibility = Visibility.Visible;
             }
             else
             {
-                BackBtn.Visibility = Visibility.Collapsed;
-                VisitorBtn.Visibility = Visibility.Visible;
-                AdminBtn.Visibility = Visibility.Visible;
+                BtnBack.Visibility = Visibility.Collapsed;
             }
         }
 
-        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             if (MainFrame.CanGoBack)
-            {
                 MainFrame.GoBack();
-            }
         }
     }
 }

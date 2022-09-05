@@ -4,6 +4,60 @@
              xmlns:local="clr-namespace:nba"
              StartupUri="MainScreenPage.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="MainBlue">#FF6995C2</SolidColorBrush>
+        <Style TargetType="Button" x:Key="RounderButton">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"></Setter>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <!--Создание кнопки с вызовом стиля для цвета кнопки.-->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FF6995c2"/>
+            <Setter Property="Height" Value="50"></Setter>
+            <Setter Property="Width" Value="150"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Margin" Value="30"></Setter>
+
+        </Style>
+
+        <!--Создание стиля кнопки с вызовом стиля RounderButton} для округления.-->
+        <Style TargetType="Button" x:Key="Graybutton" BasedOn="{StaticResource RounderButton}">
+            <Setter Property="Padding" Value="30,5"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+
+        <!--Стиль для метки заголовка.-->
+        <Style TargetType="Label" x:Key="HeaderLabel">
+            <Setter Property="FontSize" Value="22"></Setter>
+            <Setter Property="FontFamily" Value="Calibri"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+
+        <!--Стиль для выравнивания меток по центру.-->
+        <Style TargetType="Label">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+
+        <!--Стиль для элемента ComboBox c шириной и выравниванием.-->
+        <Style TargetType="ComboBox">
+            <Setter Property="Width" Value="120"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+
+        <!--Стиль для элемента TextBox c шириной и выравниванием.-->
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="120"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="PadinationButton">
+            <Setter Property="Foreground" Value="{StaticResource MainBlue}">
+            </Setter>
+            <Setter Property="Width" Value="20"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

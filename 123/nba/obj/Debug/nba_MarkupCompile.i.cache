@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\witless\Desktop\NBK\123\nba\obj\Debug\
+C:\Users\witless\Desktop\NBK-main\123\nba\obj\Debug\
 nba
 none
 false
 DEBUG;TRACE
-C:\Users\witless\Desktop\NBK\123\nba\App.xaml
-2-1262380377
-
-7-685094846
-141183416626
-MainScreenPage.xaml;VisitorPage.xaml;
+C:\Users\witless\Desktop\NBK-main\123\nba\App.xaml
+5850370222
+2-1436223632
+27-1047719315
+191521684559
+MainScreenPage.xaml;Pages\MatchupPage.xaml;Pages\PlayersPage.xaml;Pages\VisitorAdminPage.xaml;Pages\VisitorPage.xaml;
 
 True
 
