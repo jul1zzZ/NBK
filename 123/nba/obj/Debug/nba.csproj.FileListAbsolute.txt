@@ -59,7 +59,6 @@ C:\Users\Администратор\Desktop\NBK-main\123\nba\obj\Debug\Pages\Pla
 C:\Users\Администратор\Desktop\NBK-main\123\nba\obj\Debug\nba_Content.g.cs
 C:\Users\Администратор\Desktop\NBK-main\123\nba\obj\Debug\Pages\PlayersPage.baml
 C:\Users\Администратор\Desktop\NBK-main\123\nba\obj\Debug\nba.csproj.CopyComplete
-C:\Users\Администратор\Desktop\NBK-main\123\nba\obj\Debug\nba.csprojAssemblyReference.cache
 C:\Users\witless\Desktop\NBK-main\123\nba\bin\Debug\nba.exe.config
 C:\Users\witless\Desktop\NBK-main\123\nba\bin\Debug\nba.exe
 C:\Users\witless\Desktop\NBK-main\123\nba\bin\Debug\nba.pdb
@@ -68,7 +67,6 @@ C:\Users\witless\Desktop\NBK-main\123\nba\bin\Debug\EntityFramework.SqlServer.dl
 C:\Users\witless\Desktop\NBK-main\123\nba\bin\Debug\EntityFramework.xml
 C:\Users\witless\Desktop\NBK-main\123\nba\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\witless\Desktop\NBK-main\123\nba\bin\Debug\ru\EntityFramework.resources.dll
-C:\Users\witless\Desktop\NBK-main\123\nba\obj\Debug\nba.csproj.AssemblyReference.cache
 C:\Users\witless\Desktop\NBK-main\123\nba\obj\Debug\MainScreenPage.g.cs
 C:\Users\witless\Desktop\NBK-main\123\nba\obj\Debug\Pages\PlayersPage.g.cs
 C:\Users\witless\Desktop\NBK-main\123\nba\obj\Debug\Pages\VisitorAdminPage.g.cs
@@ -91,3 +89,5 @@ C:\Users\witless\Desktop\NBK-main\123\nba\obj\Debug\nba.exe
 C:\Users\witless\Desktop\NBK-main\123\nba\obj\Debug\nba.pdb
 C:\Users\witless\Desktop\NBK-main\123\nba\obj\Debug\Pages\MatchupPage.g.cs
 C:\Users\witless\Desktop\NBK-main\123\nba\obj\Debug\Pages\MatchupPage.baml
+C:\Users\Администратор\Desktop\NBK-main\123\nba\obj\Debug\Pages\MatchupPage.g.cs
+C:\Users\Администратор\Desktop\NBK-main\123\nba\obj\Debug\Pages\MatchupPage.baml

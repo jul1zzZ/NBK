@@ -15,11 +15,14 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Margin="10,0">
                 <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                    <Image Source="C:\Users\witless\Desktop\NBK-main\123\nba\Resources\logo.jpg"/>
+                    <!--<Image Source="C:\Users\Администратор\Desktop\NBK-main\123\nba\Resources\logo.jpg"/>-->
                     <Label Content="NBA Management System"/>
                 </StackPanel>
                 <Label Style="{StaticResource HeaderLabel}" HorizontalAlignment="Center" Content="{Binding ElementName=MainFrame, Path=Content.Title}"/>
-                <Button x:Name="BtnBack" HorizontalAlignment="Right" VerticalAlignment="Top" Click="BtnBack_Click" Width="50" Height="20">back</Button>
+                <StackPanel Grid.Row="0" Margin="0,1" VerticalAlignment="Center" HorizontalAlignment="Right" Height="68" RenderTransformOrigin="0.5,0.5" Width="108">
+                    <Button x:Name="BtnBack" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Back" Click ="BtnBack_Click" Width="55" Height="28" Margin="0,30,25,30"></Button>
+                </StackPanel>
+
             </Grid>
             <Grid Background="CornflowerBlue" Grid.Row="2"></Grid>
             <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered"/>

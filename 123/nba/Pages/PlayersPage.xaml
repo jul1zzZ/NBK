@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:nba.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1000"
-      Title="PlayersPage">
+      Title="PlayersPage" IsVisibleChanged="Page_IsVisibleChanged">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"></RowDefinition>
@@ -36,17 +36,17 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Team" Width="*">
+                <DataGridTemplateColumn Header="PosName" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Team.TeamName}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Position.Name}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Position" Width="*">
+                <DataGridTemplateColumn Header="PositionAbbr" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Position.PositionName}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Position.Abbr}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -67,11 +67,38 @@
                 <DataGridTemplateColumn Header="Country" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding CountryName}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Country.CountryName}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+
+        <StackPanel Grid.Row="0" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Left">
+            <TextBlock Text="Введите текст для поиска:"/>
+            <TextBox x:Name="SearchTb" TextChanged="SearchTb_TextChanged" Margin="0 0 10 0" Width="150"/>
+            <TextBlock Text="Сортировка по сезонам: " />
+            <ComboBox x:Name="SeasonSortCb" SelectionChanged="PlayersSortCb_SelectionChanged" Margin="0 0 10 0" Width="150" >
+            </ComboBox>
+            <TextBlock Text="CountryCode: "/>
+            <ComboBox x:Name="CountryCodeCb" SelectionChanged="CountryCodeCb_SelectionChanged" DisplayMemberPath="CountryCode" Margin="0 0 10 0" Width="150">
+                <ComboBoxItem Content="Name"/>
+                <ComboBoxItem Content="Weight"/>
+                <ComboBoxItem Content="Height"/>
+            </ComboBox>
+        </StackPanel>
+        <!--<StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Top">
+
+            <TextBlock Text="Номер страницы: "/>
+            <TextBox x:Name="PageCount" Text="1" Width="100" TextChanged="PageCount_TextChanged" VerticalAlignment="Center"/>
+
+            <Button x:Name="prevPages" Grid.Row="2" Content="prev" Click="prevPages_Click" VerticalAlignment="Bottom" Width="50" Height="30"/>
+            <Button x:Name="firstBtn" Content="1" Click="firstBtn_Click" Width="50" VerticalAlignment="Bottom" Height="30"/>
+            <Button x:Name="secondBtn" Content="2" Click="secondBtn_Click" Width="50" VerticalAlignment="Bottom" Height="30"/>
+            <Button x:Name="fourthBtn" Content="3" Click="fourthBtn_Click" Width="50" VerticalAlignment="Bottom" Height="30"/>
+            <Button x:Name="fivethBtn" Content="4" Click="fivethBtn_Click" Width="50" VerticalAlignment="Bottom" Height="30"/>
+            <Button x:Name="nextPages" Content="next" Click="nextPages_Click" Width="50" VerticalAlignment="Bottom" Height="30"/>
+
+        </StackPanel>-->
     </Grid>
 </Page>

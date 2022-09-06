@@ -21,9 +21,9 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Right">
-                <Image VerticalAlignment="Center" Width="70" Height="70"  Source="{Binding TeamAway.Logo}"></Image>
+                <Image VerticalAlignment="Center" Width="70" Height="70"  Source="{Binding Team.Logo}"></Image>
                 <StackPanel VerticalAlignment="Center">
-                    <Label Content="{Binding TeamAway.TeamName}"></Label>
+                    <Label Content="{Binding Team.TeamName}"></Label>
                     <Label>(Away)</Label>
                 </StackPanel>
             </StackPanel>
@@ -32,9 +32,9 @@
                 <TextBlock Text="{Binding Starttime, StringFormat={}{0:HH:mm 'Start'}}"></TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Column="2">
-                <Image VerticalAlignment="Center" Width="70" Height="70" Source="{Binding TeamHome.Logo}"></Image>
+                <Image VerticalAlignment="Center" Width="70" Height="70" Source="{Binding Team1.Logo}"></Image>
                 <StackPanel VerticalAlignment="Center">
-                    <Label Content="{Binding TeamHome.TeamName}"></Label>
+                    <Label Content="{Binding Team1.TeamName}"></Label>
                     <Label>(Home)</Label>
                 </StackPanel>
             </StackPanel>
@@ -59,12 +59,12 @@
                                 <RowDefinition Height="60"></RowDefinition>
                             </Grid.RowDefinitions>
                             <StackPanel VerticalAlignment="Bottom" Orientation="Vertical" Grid.Column="0" Grid.Row="0">
-                                <Image Width="40" Height="40" Source="{Binding TeamAway.Logo}"></Image>
-                                <TextBlock Text="{Binding TeamAway.TeamName}" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <Image Width="40" Height="40" Source="{Binding Team.Logo}"></Image>
+                                <TextBlock Text="{Binding Team.TeamName}" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
                             </StackPanel>
                             <StackPanel VerticalAlignment="Bottom" Orientation="Vertical" Grid.Column="2" Grid.Row="0">
-                                <Image Width="40" Height="40" Source="{Binding TeamHome.Logo}"></Image>
-                                <TextBlock Text="{Binding TeamHome.TeamName}" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <Image Width="40" Height="40" Source="{Binding Team1.Logo}"></Image>
+                                <TextBlock Text="{Binding Team1.TeamName}" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
                             </StackPanel>
                             <StackPanel VerticalAlignment="Center" Orientation="Vertical" Grid.Row="0" Grid.Column="1">
                                 <Label Foreground="White" Content="{Binding StatusString}" Background="{Binding StatusColor}" Width="80" HorizontalContentAlignment="Center"></Label>

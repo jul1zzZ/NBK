@@ -11,7 +11,9 @@ namespace nba.Entities
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Windows.Media;
+    using nba.Entities;
+
     public partial class Matchup
     {
         public int MatchupId { get; set; }
@@ -30,5 +32,41 @@ namespace nba.Entities
         public virtual MatchupType MatchupType { get; set; }
         public virtual Team Team { get; set; }
         public virtual Team Team1 { get; set; }
+
+        public string StatusString
+        {
+            get
+            {
+                switch (Status)
+                {
+                    case -1:
+                        return "Not Start";
+                    case 0:
+                        return "Running";
+                    case 1:
+                        return "Finished";
+                    default:
+                        return "?????";
+                }
+            }
+        }
+
+        public SolidColorBrush StatusColor
+        {
+            get
+            {
+                switch (Status)
+                {
+                    case -1:
+                        return Brushes.LightBlue;
+                    case 0:
+                        return Brushes.Red;
+                    case 1:
+                        return Brushes.Gray;
+                    default:
+                        return Brushes.Green;
+                }
+            }
+        }
     }
 }
