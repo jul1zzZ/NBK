@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:nba.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MatchupPage">
+      Title="Matchup Page">
 
     <Grid>
         <Grid.RowDefinitions>

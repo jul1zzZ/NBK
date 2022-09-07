@@ -45,31 +45,51 @@ namespace nba.Pages
 
         private void Update()
         {
-            List<Player> players1 = NBAShortEntities.GetContext().Players.OrderBy(p => p.Name).ToList();
-            List<Season> seasons1 = NBAShortEntities.GetContext().Seasons.OrderBy(p => p.Name).ToList();
+            List<Player> players = NBAShortEntities.GetContext().Players.OrderBy(p => p.Name).ToList();
+            //List<Season> seasons1 = NBAShortEntities.GetContext().Seasons.OrderBy(p => p.Name).ToList();
 
             if (SearchTb.Text.Trim() != "")
             {
-                players1 = players1
+                players = players
                     .Where(p => p.Name.Trim().ToLower().Contains(SearchTb.Text.Trim().ToLower()) ||
                     p.CountryCode.Trim().Contains(SearchTb.Text.Trim().ToLower())).ToList();
             }
-            if (SeasonSortCb.SelectedIndex > 0)
-            {
-                seasons1 = seasons1.Where(p => p.SeasonId == (SeasonSortCb.SelectedItem as Season).SeasonId).ToList();
-            }
+            //if (SeasonSortCb.SelectedIndex > 0)
+            //{
+            //    seasons1 = seasons1.Where(p => p.SeasonId == (SeasonSortCb.SelectedItem as Season).SeasonId).ToList();
+            //}
 
             if (CountryCodeCb.SelectedIndex > 0)
             {
                 switch (CountryCodeCb.SelectedIndex)
                 {
                     case 1:
-                        players1 = players1.OrderBy(p => p.Weight).ToList();
+                        players = players.OrderBy(p => p.Weight).ToList();
                         break;
                     case 2:
-                        players1 = players1.OrderByDescending(p => p.Weight).ToList();
+                        players = players.OrderByDescending(p => p.Weight).ToList();
                         break;
                 }
+            }
+            try
+            {
+                bool canParse = int.TryParse(PageCount.Text, out int currentPage);
+                List<Player> pagePlayers = new List<Player>();
+                currentPage = currentPage <= 0 || currentPage > players.Count || !canParse ? 1 : currentPage;
+                int itemPerPage = 6;
+                int offset = ((currentPage - 1) * itemPerPage + 1) - 1;
+                for ( int i =offset; i<itemPerPage +offset;i++)
+                {
+                    if ( i < players.Count)
+                    {
+                        pagePlayers.Add(players[i]);
+                    }
+                }
+                DataPlayers.ItemsSource = pagePlayers;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -103,40 +123,61 @@ namespace nba.Pages
             CountryCodeCb.SelectedIndex = 0;
         }
 
-        //private void PageCount_TextChanged(object sender, TextChangedEventArgs e)
-        //{
+        private void PageCount_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Update();
+        }
 
-        //}
+        private void prevPages_Click(object sender, RoutedEventArgs e)
+        {
+            List<Player> players = NBAShortEntities.GetContext().Players.OrderBy(p => p.Name).ToList();
+            if (pageNum > 4)
+            {
+                pageNum -= 4;
+                firstBtn.Content = pageNum;
+                secondBtn.Content = pageNum + 1;
+                fourthBtn.Content = pageNum + 2;
+                fivethBtn.Content = pageNum + 3;
+            }
+        }
 
-        //private void prevPages_Click(object sender, RoutedEventArgs e)
-        //{
+        private void firstBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PageCount.Text = pageNum.ToString();
+            Update();
+        }
 
-        //}
+        private void secondBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PageCount.Text = (pageNum + 1).ToString();
+            Update();
+        }
 
-        //private void firstBtn_Click(object sender, RoutedEventArgs e)
-        //{
+        private void fourthBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PageCount.Text = (pageNum + 2).ToString();
+            Update();
+        }
 
-        //}
+        private void fivethBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PageCount.Text = (pageNum + 3).ToString();
+            Update();
+        }
 
-        //private void secondBtn_Click(object sender, RoutedEventArgs e)
-        //{
+        private void nextPages_Click(object sender, RoutedEventArgs e)
+        {
+            List<Player> players = NBAShortEntities.GetContext().Players.OrderBy(p => p.Name).ToList();
+            if (pageNum < players.Count / 6)
+            {
+                pageNum += 4;
+                firstBtn.Content = pageNum;
+                secondBtn.Content = pageNum + 1;
+                fourthBtn.Content = pageNum + 2;
+                fivethBtn.Content = pageNum + 3;
+            }
 
-        //}
-
-        //private void fourthBtn_Click(object sender, RoutedEventArgs e)
-        //{
-
-        //}
-
-        //private void fivethBtn_Click(object sender, RoutedEventArgs e)
-        //{
-
-        //}
-
-        //private void nextPages_Click(object sender, RoutedEventArgs e)
-        //{
-
-        //}
+        }
     }
 }
 

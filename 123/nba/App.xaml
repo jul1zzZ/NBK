@@ -14,7 +14,7 @@
         </Style>
 
         <!--Создание кнопки с вызовом стиля для цвета кнопки.-->
-        <Style TargetType="Button">
+        <!--<Style TargetType="Button">
             <Setter Property="Background" Value="#FF6995c2"/>
             <Setter Property="Height" Value="50"></Setter>
             <Setter Property="Width" Value="150"></Setter>
@@ -22,7 +22,7 @@
             <Setter Property="Foreground" Value="White"></Setter>
             <Setter Property="Margin" Value="30"></Setter>
 
-        </Style>
+        </Style>-->
 
         <!--Создание стиля кнопки с вызовом стиля RounderButton} для округления.-->
         <Style TargetType="Button" x:Key="Graybutton" BasedOn="{StaticResource RounderButton}">
