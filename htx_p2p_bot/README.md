@@ -14,4 +14,6 @@
 `TOP_N` (5), `CHECK_INTERVAL` сек (60), `MAX_PRICE` — уведомлять только если цена ≤ значения,
 `MIN_LIMIT` — отсеивать объявления с мин. лимитом выше значения, `PAY_METHOD`, `COIN_ID` (2=USDT), `CURRENCY` (11=RUB), `TRADE_TYPE` (sell = вкладка «Покупка»).
 
+`ONLY_TRADABLE` (true, «Доступные»), `THUMBS_UP`, `VERIFIED` («Проверенные»), `TRADED`, `FOLLOWED` — как фильтры в приложении (true/false).
+
 > Эндпоинт HTX (`HTX_API_URL`) и ID параметров взяты по памяти и не проверялись — из моего окружения HTX недоступен. Если ответ пустой/ошибка, откройте P2P в браузере → DevTools → Network, найдите запрос `trade-market` и поправьте URL/параметры.

@@ -13,6 +13,12 @@ TOP_N = int(os.environ.get("TOP_N", "5"))
 CHECK_INTERVAL = int(os.environ.get("CHECK_INTERVAL", "60"))
 MAX_PRICE = float(os.environ.get("MAX_PRICE", "0"))  # 0 = уведомлять при любом изменении лучшей цены
 MIN_LIMIT = float(os.environ.get("MIN_LIMIT", "0"))  # пропускать объявления с минимальным лимитом выше этого (0 = выкл)
+# Фильтры из приложения: «Доступные» включено по умолчанию, остальные выкл.
+ONLY_TRADABLE = os.environ.get("ONLY_TRADABLE", "true")  # «Доступные»
+THUMBS_UP = os.environ.get("THUMBS_UP", "false")         # «Thumbs Up»
+VERIFIED = os.environ.get("VERIFIED", "false")           # «Проверенные»
+TRADED = os.environ.get("TRADED", "false")               # «С кем недавно торговал»
+FOLLOWED = os.environ.get("FOLLOWED", "false")           # «Отслеживаемые»
 API_URL = os.environ.get("HTX_API_URL", "https://www.htx.com/-/x/otc/v1/data/trade-market")
 
 TG = f"https://api.telegram.org/bot{BOT_TOKEN}"
@@ -24,8 +30,8 @@ def fetch_ads():
         "coinId": COIN_ID, "currency": CURRENCY, "tradeType": TRADE_TYPE,
         "currPage": 1, "payMethod": PAY_METHOD, "acceptOrder": 0,
         "blockType": "general", "online": 1, "range": 0, "amount": "",
-        "onlyTradable": "false", "isThumbsUp": "false", "isMerchant": "false",
-        "isTraded": "false", "isFollowed": "false",
+        "onlyTradable": ONLY_TRADABLE, "isThumbsUp": THUMBS_UP, "isMerchant": VERIFIED,
+        "isTraded": TRADED, "isFollowed": FOLLOWED,
     }
     r = requests.get(API_URL, params=params, headers=HEADERS, timeout=15)
     r.raise_for_status()
